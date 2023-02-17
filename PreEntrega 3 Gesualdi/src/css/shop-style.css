@@ -1,0 +1,556 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* The body */
+
+body {
+  transition: .5s;
+}
+
+
+/* The up-header*/
+
+.fa-truck-fast {
+  color: white;
+}
+
+.fa-bolt {
+  color: white
+}
+
+.up-header {
+  position: relative;
+  background: rgba(0, 0, 0, 0.938);
+  padding: 2px 0;
+  color: rgb(221, 221, 221);
+}
+
+.extra-info {
+  text-align: start;
+  display: flex;
+  padding: 0 5%;
+}
+
+.sponsor {
+  padding: 0 5px;
+  height: 15px;
+}
+
+.information-container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.information-slider {
+  display: flex;
+  width: 300%;
+  margin-left: -100%;
+}
+
+.information-slider-section {
+  color: white;
+  font-family: 'poppins', sans-serif;
+  font-size: 20px;
+  width: 100%;
+}
+
+
+/* Header*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 60px;
+  background: rgb(220, 223, 238);
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.07);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+
+
+#isotype-header-logo {
+  max-width: 90px;
+  width: 6vmax;
+}
+
+.Eleven-Electronics-logo {
+  display: flex;
+  margin-left: 10px;
+}
+
+#Eleven-Electronics-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+#Eleven-Electronics-name a {
+  font-family: 'Questrial', sans-serif;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+
+/* Themes switcher */
+.switch.container {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.lbl {
+  display: flex;
+  width: 60px;
+  height: 33px;
+  background: #979797;
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+  transition: .25s;
+}
+
+.lbl::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: #eee;
+  border-radius: 100px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: .25s;
+}
+
+#switch:checked+.lbl::after {
+  left: 30px;
+}
+
+#switch:checked+.lbl {
+  background: black;
+}
+
+#switch {
+  display: none;
+}
+
+
+/* The search bar */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(158, 158, 158);
+  border-radius: 60px;
+  padding: 4px 60px;
+  backdrop-filter: blur(4px) saturated(180px);
+}
+
+.search-bar {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  position: relative;
+  padding: auto 300px;
+  right: 40px;
+  margin-right: -80px;
+  width: 300px;
+  color: rgb(245, 243, 233);
+}
+
+.search-bar::placeholder {
+  color: rgb(245, 243, 233);
+}
+
+.search-submit-button {
+  border: none;
+  outline: none;
+  position: relative;
+  left: 57px;
+  border-radius: 60px;
+  margin-right: 10px;
+  margin: auto 5px;
+  width: 35px;
+  height: 35px;
+  background: #58629bc0;
+  cursor: pointer;
+}
+
+#search-icon {
+  color: white;
+  margin-left: -2px;
+  margin-bottom: -2px;
+}
+
+/* The nav-bar */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu li {
+  list-style: none;
+  padding: 0 1em;
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: rgb(132, 0, 255);
+}
+
+.menu li a.active::after,
+.menu li a:hover::after {
+  content: "";
+  width: 35%;
+  height: 2px;
+  background: rgb(132, 0, 255);
+  position: absolute;
+  bottom: -4px;
+  left: 15px;
+  transition: .4s;
+}
+
+
+/* Products Section*/
+.pr-shop {
+  display: flex;
+}
+
+
+/* Search Filters*/
+.filters-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(56, 56, 56, 0.226);
+  margin-right: 1em;
+  width: 100%;
+  padding-top:5em ;
+}
+
+#prices {
+  display: flex;
+  height: fit-content;
+}
+
+.price-and-after {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.price-flt{
+  text-align: center;
+  border-radius: 2em;
+  height: fit-content;
+  padding: 0.4em;
+  width: 8em;
+  font-size: 15px;
+}
+
+.price-and-after::after {
+  color: rgb(255, 255, 255);
+  content: "-";
+  font-size: 25px;
+  margin: auto 5px auto 8px;
+}
+
+/* Products Display*/
+.total-list {
+  justify-content: center;
+  margin-inline: 10%;
+  width: 100%;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .5em;
+  background-color: rgb(235, 235, 235);
+  padding: 1em;
+}
+
+.product {
+  padding: 1em;
+  margin: 1em;
+  max-width: 16em;
+  min-height: 15em;
+  background-color: rgb(245, 242, 242);
+  top: 2em;
+  border-radius: 1em;
+  box-shadow: 1em 1em 1em rgba(219, 219, 219, 0.534),
+    -1em -1em 1em rgba(255, 255, 255, 0.534);
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  margin-top: 0.2em;
+}
+
+.prod-brand {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 450;
+}
+
+.prod-name {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: .4em;
+}
+
+.prod-price {
+  font-size: 14px;
+  color: rgb(132, 0, 255);
+}
+
+
+.product:hover {
+  box-shadow: 1em 1em 1em rgba(185, 185, 185, 0.897),
+    -1em -1em 1em rgba(228, 228, 228, 0.815);
+}
+
+.product img {
+  cursor: pointer;
+}
+
+.pr-brand {
+  font-size: 12px;
+}
+
+.price-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-btn h4 {
+  font-size: 15px;
+}
+
+.price-btn i {
+  margin-right: 1em;
+  font-size: 17px;
+}
+
+.price-btn i:hover {
+  color: rgb(132, 0, 255);
+  cursor: pointer;
+}
+
+.product:active {
+  box-shadow: 1em 1em 1em rgba(196, 196, 196, 0.897),
+    -1em -1em 1em rgba(226, 226, 226, 0.815);
+  transition: 0.5s;
+}
+
+/* The Web Footer*/
+footer {
+  width: 100%;
+  padding-top: 10px;
+  background: rgb(201, 201, 201);
+  transition: .5s;
+}
+
+.container-footer {
+  display: flexbox;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.container-footer ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.container-footer ul li {
+  width: 350px;
+}
+
+
+.box-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.box-footer h2 {
+  margin-bottom: 2px;
+  color: #343434;
+  font-weight: 700;
+}
+
+.box-footer a {
+  margin-top: 10px;
+  color: #7a7a7a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.box-footer a:hover {
+  opacity: 0.8;
+}
+
+.box-footer a i {
+  font-size: 20px;
+  padding: 2px;
+}
+
+.copyright {
+  margin: auto;
+  text-align: center;
+  padding: 10px 40px;
+}
+
+.p {
+  margin-top: 15px;
+  color: #7a7a7a;
+}
+
+.box-copyright hr {
+  border: none;
+  height: 1px;
+  background-color: #7a7a7a;
+  ;
+}
+
+
+/* The Dark Mode Appearance */
+body.dark-mode {
+  background: #292929;
+  transition: .5s;
+}
+
+
+/* Header */
+body.dark-mode header {
+  background: rgb(75, 75, 75);
+}
+
+body.dark-mode header ul li a {
+  color: rgb(255, 255, 255);
+}
+
+body.dark-mode header ul li a:hover,
+body.dark-mode header ul li a.active {
+  color: rgb(0, 238, 255);
+}
+
+body.dark-mode header ul li a.active::after,
+body.dark-mode header ul li a:hover::after {
+  background: rgb(0, 238, 255);
+}
+
+body.dark-mode #Eleven-Electronics-name p {
+  color: white;
+}
+
+/* Main Shop Section*/
+body.dark-mode .filters {
+  background-color: #e7e4e434;
+  transition: .5s;
+}
+
+body.dark-mode .products-grid {
+  background-color: #424242;
+  transition: .5s;
+}
+
+body.dark-mode .product {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  box-shadow: 1em 1em 3em rgba(87, 87, 87, 0.322),
+    -1em -1em 3em rgba(128, 128, 128, 0.288);
+  transition: .5s;
+}
+
+body.dark-mode .product:hover {
+  box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.267);
+}
+
+body.dark-mode .price-btn h4 {
+  color: rgb(0, 238, 255);
+}
+
+body.dark-mode .options i:hover {
+  color: rgb(0, 238, 255);
+}
+
+/*  Footer */
+body.dark-mode footer {
+  background-color: #0c0c0c;
+  transition: .5s;
+}
+
+
+body.dark-mode footer .box-footer h2 {
+  color: white;
+}
+
+body.dark-mode footer .box-footer a {
+  color: rgba(211, 211, 211, 0.829);
+}
+
+body.dark-mode footer p {
+  color: white;
+}
+
+/* Media queries */
+
+@media (max-width: 1200px) {
+  #Eleven-Electronics-name {
+    display: none;
+  }
+}
+
+@media (max-width: 1780px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1350px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .products-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .search {
+    display: none;
+  }
+}

@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* The body */
+
+body {
+  transition: .5s;
+}
+
+
+/* The up-header*/
+
+.fa-truck-fast {
+  color: white;
+}
+
+.fa-bolt {
+  color: white
+}
+
+.up-header {
+  position: relative;
+  background: rgba(0, 0, 0, 0.938);
+  padding: 2px 0;
+  color: rgb(221, 221, 221);
+}
+
+.extra-info {
+  text-align: start;
+  display: flex;
+  padding: 0 5%;
+}
+
+.sponsor {
+  padding: 0 5px;
+  height: 15px;
+}
+
+.information-container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.information-slider {
+  display: flex;
+  width: 300%;
+  margin-left: -100%;
+}
+
+.information-slider-section {
+  color: white;
+  font-family: 'poppins', sans-serif;
+  font-size: 20px;
+  width: 100%;
+}
+
+
+/* Header*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 60px;
+  background: rgb(220, 223, 238);
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.07);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+
+
+#isotype-header-logo {
+  max-width: 90px;
+  width: 6vmax;
+}
+
+.Eleven-Electronics-logo {
+  display: flex;
+  margin-left: 10px;
+}
+
+#Eleven-Electronics-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+#Eleven-Electronics-name a {
+  font-family: 'Questrial', sans-serif;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+
+/* Themes switcher */
+.switch.container {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.lbl {
+  display: flex;
+  width: 60px;
+  height: 33px;
+  background: #979797;
+  border-radius: 1em;
+  cursor: pointer;
+  position: relative;
+  transition: .25s;
+}
+
+.lbl::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: #eee;
+  border-radius: 1em;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: .25s;
+}
+
+#switch:checked+.lbl::after {
+  left: 30px;
+}
+
+#switch:checked+.lbl {
+  background: black;
+}
+
+#switch {
+  display: none;
+}
+
+
+/* The Search Bar */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(158, 158, 158);
+  border-radius: 2em;
+  padding: 4px 60px;
+  backdrop-filter: blur(4px) saturated(180px);
+}
+
+.search-bar {
+  background: transparent;
+
+  border: none;
+  outline: none;
+  font-size: 18px;
+  position: relative;
+  padding: auto 300px;
+  right: 40px;
+  margin-right: -80px;
+  width: 300px;
+  color: rgb(245, 243, 233);
+}
+
+.search-bar::placeholder {
+  color: rgb(245, 243, 233);
+}
+
+.search-submit-button {
+  border: none;
+  outline: none;
+  position: relative;
+  left: 57px;
+  border-radius: 100%;
+  margin-right: 10px;
+  margin: auto 5px;
+  width: 35px;
+  height: 35px;
+  background: #58629bc0;
+  cursor: pointer;
+}
+
+#search-icon {
+  color: white;
+  margin-left: -2px;
+  margin-bottom: -2px;
+}
+
+
+/* The nav-bar */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu li {
+  list-style: none;
+  padding: 0 1em;
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: rgb(132, 0, 255);
+}
+
+.menu li a.active::after,
+.menu li a:hover::after {
+  content: "";
+  width: 35%;
+  height: 2px;
+  background: rgb(132, 0, 255);
+  position: absolute;
+  bottom: -4px;
+  left: 15px;
+  transition: .4s
+}
+
+/* The profiles section */
+.the-team{
+  margin-top: 1em;
+  text-align: center; 
+}
+
+.profiles {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-inline: 20px;
+  margin-top: 30px;
+}
+
+.each-profiles {
+  width: 190px;
+  height: 300px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 1em 1em 2em #d6d6d6, -1em -1em 2em #ffffff;
+  display: flexbox;
+  margin: 15px 0;
+  border-radius: 1.5em;
+  transition: .5s;
+}
+
+
+.each-profiles:hover {
+  box-shadow: 10px 10px 60px rgba(44, 44, 44, 0.288);
+  cursor: pointer;
+}
+.each-profiles img {
+  width: 100%;
+  border-radius: 100%;
+  margin-bottom: 10px;
+  margin-top: -9px;
+  margin-left: 4px;
+}
+
+/* The Web Footer*/
+footer {
+  width: 100%;
+  padding-top: 10px;
+  background: rgb(201, 201, 201);
+  transition: .5s;
+}
+
+.container-footer {
+  display: flexbox;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.container-footer ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.container-footer ul li {
+  width: 350px;
+}
+
+
+.box-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.box-footer h2 {
+  margin-bottom: 2px;
+  color: #343434;
+  font-weight: 700;
+}
+
+.box-footer a {
+  margin-top: 10px;
+  color: #7a7a7a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.box-footer a:hover {
+  opacity: 0.8;
+}
+
+.box-footer a i {
+  font-size: 20px;
+  padding: 2px;
+}
+
+.copyright {
+  margin: auto;
+  text-align: center;
+  padding: 10px 40px;
+}
+
+.copyright p {
+  margin-top: 15px;
+  color: #7a7a7a;
+}
+
+.copyright hr {
+  border: none;
+  height: 1px;
+  background-color: #7a7a7a;
+  ;
+}
+
+/* The dark Mode appearance */
+body.dark-mode {
+  background: #292929;
+  transition: .5s;
+}
+
+
+/* Header */
+body.dark-mode header {
+  background: rgb(75, 75, 75);
+}
+
+body.dark-mode header ul li a {
+  color: rgb(255, 255, 255);
+}
+
+body.dark-mode header ul li a:hover,
+body.dark-mode header ul li a.active {
+  color: rgb(0, 238, 255);
+}
+
+body.dark-mode header ul li a.active::after,
+body.dark-mode header ul li a:hover::after {
+  background: rgb(0, 238, 255);
+}
+
+body.dark-mode #Eleven-Electronics-name p {
+  color: white;
+}
+
+/* Profiles */
+
+body.dark-mode .the-team{
+  color: white;
+}
+
+body.dark-mode .each-profiles{
+  background: rgb(26, 26, 26);
+  box-shadow: 1em 1em 3em rgba(71, 71, 71, 0.322);
+  transition: .5s;
+  color: white;
+}
+
+body.dark-mode .each-profiles:hover {
+  box-shadow: 7px 7px 40px rgba(0, 0, 0, 0.637);
+}
+
+body.darkMode .each-profiles .naming {
+  background: white;
+}
+
+
+
+/*  Footer */
+body.dark-mode footer {
+  background-color: #0c0c0c;
+  transition: .5s;
+}
+
+
+body.dark-mode footer .box-footer h2 {
+  color: white;
+}
+
+body.dark-mode footer .box-footer a {
+  color: rgba(211, 211, 211, 0.829);
+}
+
+body.dark-mode footer p {
+  color: white;
+}
+
+/* Media queries */
+
+@media (max-width: 1200px) {
+  #Eleven-Electronics-name {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .search {
+    display: none;
+  }
+}
